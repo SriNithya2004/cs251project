@@ -33,10 +33,9 @@ clicking on which user gets redirected to the homepage ,on whichever page they a
  - contains an option "Create Course" to create course:
  - a link leading in the creation of a course by an instructor (the instructor have to enter a course name and a join code to create the course).
  course name - maxlength=100, it's unique.
- Join code - maxlength=100, it's unique and is required for students to join the course
- If you enter a course name or join code that's already registered, an error message appears "Course name or Join code already exists!"
+ - Join code - maxlength=100, it's unique and is required for students to join the course
+ If you enter a course name or join code that's already registered, an error message appears **"Course name or Join code already exists!"**
  - courses that are created by the instructor
-################################################## 
 	
 ### Homepage of Student:
  - contains an option "Join Course" to join course:
