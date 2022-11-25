@@ -43,11 +43,14 @@ clicking on which user gets redirected to the homepage ,on whichever page they a
 
 ### Homepage of Student:
  - contains an option "Join Course" to join course:
+ ![stucoujoi](https://user-images.githubusercontent.com/96788348/204049831-7f1c63e1-9a48-4a7d-8610-7790d52acc58.png)
+
  - a link allowing the student to join in a course after the join code of the course is entered.
  - Homepage contains the courses that user is registered in and assignments that are due under TO-DO column.
 
 Clicking on the courses that are visible on the homepage:
 home page gets redirected to the course page
+![studenthop](https://user-images.githubusercontent.com/96788348/204049905-880a0dec-79df-4638-94ae-e41d23402025.png)
 
 ## Course page of instructor:
 Clicking on course name at any point from here redirects us to course homepage.
