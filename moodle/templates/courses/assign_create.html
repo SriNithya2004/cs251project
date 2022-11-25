@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+
+{% block title %}Create Assignment{% endblock %}
+{% block H %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+
+{% endblock %}
+{% block content %}
+
+
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+  <br>
+  <a  style="color: rgb(42, 35, 128); font-size: 35px; font-weight:600;" href = "{% url 'coursepage' course.pk %}" class="course" style="text-decoration: none; display: block;">{{ course.name }}</a>
+  <h1 style="color: rgb(42, 35, 128)">NEW ASSIGNMENT</h1>
+  <br>
+  <form method="post" enctype="multipart/form-data" action="" style="font-size: 20px; font-weight: 400;" >
+    {% csrf_token %}
+    {% for field in form %}
+		<div class="fieldWrapper">
+		{{ field.errors }}
+		
+		<p class = "field" style="color: rgb(50, 41, 117); font-size: 22px;">{{ field.label_tag }}     {{field}}</p>
+		{% if field.help_text %}
+			<div class = "help" style="color: rgb(197, 13, 28);font-size: 19px;">{{ field.help_text|safe }} </div>
+		{% endif %}
+		</div>
+	  {% endfor %}
+
+    <button type="submit" class="B1 button2">create</button>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block title %}Profile Change{% endblock %}
+
+{% block content %}
+<br>
+
+<div class = "profile" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+    font-weight:100; font-size:20px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;margin-top: 10px;
+    color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+    <h1 style="color: rgb(22, 20, 20);">Edit Profile</h1>
+    <form style="font-weight:400" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="fieldWrapper">
+            {{ field.errors }}
+            <p class = "field" style="font-size:23px">{{ field.label_tag }}     {{field}}</p>
+            {% if field.help_text %}
+                <div class = "help" style="color:rgb(95, 94, 99);">{{ field.help_text|safe }} </div>
+            {% endif %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="B1 button2">UPDATE</button>
+    </form>
+</div>
+
+
+{% endblock %}

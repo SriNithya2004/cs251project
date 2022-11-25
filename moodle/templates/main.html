@@ -1,0 +1,66 @@
+<!-- templates/base.html -->
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Home{% endblock %}</title>
+  {% block H %}{% endblock %}
+ 
+  <style>
+
+  </style>
+</head>
+<body style="color:rgb(169, 197, 197)">
+      <div style="width: 100%; padding: 0; border: 6px solid rgb(10, 10, 10); margin: 0;">
+          <div style="text-align: center; font-size: 55px;background-color: black; color:white;">Moodle</div>
+      </div>
+
+      {% if user.is_authenticated %}
+
+      <div class="dropdown" style="float:right; ">
+        <button class="dropbtn" style="color:rgb(63, 54, 137); font-size: 26px; font-style:normal; margin-top: 0px;">   {{ user.username }}   </button>
+        <div class="dropdown-content" style="background-color:rgba(200, 232, 235, 0.842); color:rgb(63, 54, 137)">
+        <a href="{% url 'profile' %}" >View Profile</a>
+        <a href="{% url 'profile_change' %}">Edit Profile</a>
+        <a href="{% url 'change_pass' %}">Change Password</a>
+        <a href="{% url 'logout' %}">Logout</a>
+        </div>
+      </div>
+
+      <div id="mySidenav" class="sidenav" >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="{% url 'homepage' %}">Dashboard</a>
+      </div>
+      
+      <div id="main1">
+        <span style="font-size:35px; cursor:pointer;" onclick="openNav()" >&#9776;</span>
+      </div>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "200px";
+          document.getElementById("main1").style.marginLeft = "200px";
+          document.getElementById("main2").style.marginLeft= "200px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main1").style.marginLeft= "0";
+          document.getElementById("main2").style.marginLeft= "0";
+        }
+      </script>
+
+    {% else %}
+
+    {% endif %}
+
+    <div id="main2">
+      {% block content %}
+      {% endblock %}
+    </div>
+</body>
+</html>

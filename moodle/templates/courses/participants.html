@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+
+{% block title %}Participants{% endblock %}
+
+{% block H %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+{% endblock %}
+
+{% block content %}
+
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+
+<div>
+
+    <a href="{% url 'coursepage' course.pk %}" >
+    <h2 style="text-align: center; margin-top: 5%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px;color:rgb(10, 61, 15)" >{{ course.name }}</h2>
+    </a>
+
+</div>
+
+
+<div style="text-align: center;color:rgb(22,22,146)">
+  <h2 style="font-size: 40px;">Participants</h2>
+  </div>
+
+
+
+<div >
+    <div >
+        <div >
+            <table class="table" style="color:rgb(71, 69, 69)">
+                <thead>
+                 <p style="color:rgb(148, 18, 61);font-size:27px;text-align:center;font-weight: 400;">Instructor: {{Ins.username}}</p>
+                  <tr>
+                    <th>S.No</th>
+                    <th><h4 style="color: rgb(51, 50, 50);">Username</h4></th>
+                    <th><h4 style="color: (51, 50, 50);">Role</h4></th>
+                  </tr>
+                      
+                      
+                  
+                        {% for d in Students %}
+                        <tr>
+                            <th>{{forloop.counter}}</th>
+                            {% if user.username == d.username %}
+                            <th><h4 style="color: rgb(63, 54, 137);">{{d.username}}</h4></th>
+                            <th><h4 style="color: rgb(63, 54, 137)">STUDENT</h4</th>
+                            {% else %}
+                            <th><h4 style="color: rgb(15, 152, 106)">{{d.username}}</h4></th>
+                            <th><h4 style="color: rgb(15, 152, 106)">STUDENT</h4</th>
+                            {% endif %}
+                            
+                            {% if IsINS == 'YES' %}
+                            <th><a href = "{% url 'remove' course.pk d.pk %}"><h4>remove</h4></a></th>
+                            {% endif %}
+                        </tr>
+                      {% endfor %}
+                </thead>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+{% if IsINS == 'YES'%}
+
+    {% if a == 'True'%}
+        <p style="color:rgb(216, 18, 34);font-size:27px;text-align:center;font-weight: 200;">This student doesn't exist!</p>
+    {% endif %}
+    
+  <form method="post">
+      {% csrf_token %}
+
+  {% for field in form %}
+      <div style="text-align: center; margin: 20px 5% 5px;">
+      {{field}}
+      </div>
+  {% endfor %}
+
+  <div style="text-align: center; margin: 0px;">
+      <button type="submit" class="B1 button4" style="text-align: center; color:rgb(15, 83, 15)">Add to Course</button>
+  </div>
+
+  </form>
+{% endif %}
+</div>
+
+{% endblock %}

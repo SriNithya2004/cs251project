@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% block title %}Courses{% endblock %}
+{% block H %}
+    {% load extras %}
+{% endblock %}
+
+{% block content %}
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 35%; margin-left:35%; width: auto;
+color: rgb(63, 54, 137);border: 9px solid rgb(10, 10, 10);background-color: rgba(211, 217, 218, 0.842);" >
+
+  <div style="color:rgb(21, 65, 50);font-size:25px;font-weight400">
+    <a href = "{% url 'CourseJoin' %}">Join Course</a>
+  </div>
+</div>
+
+<br>
+
+<div >
+   <h1 style="text-align:center;color:rgb(63, 54, 137)" >COURSES</h1>
+</div>
+
+
+<div >
+    <div >
+        {% for course in scourses %}
+        <div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 45%; margin-left:45%; width: auto;
+color: rgb(63, 54, 137);border: 9px solid rgb(10, 10, 10);background-color: rgba(211, 217, 218, 0.842);" >
+
+        <a  href = "{% url 'coursepage' course.pk %}" >
+            <p style="color:rgb(63, 54, 137)">{{ course.name }}</p>
+        </a>
+        </div>
+        
+        <br>
+        {% endfor %}
+    </div>
+
+</div>
+
+</div>
+
+{% for assign in Stodo %}
+<a href = "{% url 'assign_page' assign.course.pk assign.pk %}" class="sidebox" style="height: auto; width: auto; text-align: center; padding: 2px; margin-bottom: 5px; text-decoration: none;display: block;">
+    <h1 class="font2">{{ assign.name }}</h1>
+    <h2 class = "font3">Course: {{ assign.course.name }}</h2>
+    <h3 class = "font4">{{ assign.deadline }}</h3>
+</a>
+{% endfor %}
+</div>
+{% endblock %}

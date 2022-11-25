@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block title %}Join Course{% endblock %}
+
+{% block content %}
+
+<br>
+<div style="text-align: center;color: rgb(22, 22, 146)">
+    <h1>Join Course</h1>
+    {% if wrong %}
+    <h1 style="color: rgb(181, 49, 9);"> Course doesn't Exist!</h1>
+    {% endif %}
+</div>  
+
+
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:25px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+<br>
+<form style="font-weight:400" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="B1 button2">Join</button>
+  <br>
+</form>
+</div>
+
+{% endblock %}

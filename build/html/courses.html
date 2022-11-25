@@ -1,0 +1,1091 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>courses package &#8212; project251  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="courses.migrations package" href="courses.migrations.html" />
+    <link rel="prev" title="project251" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="courses-package">
+<h1>courses package<a class="headerlink" href="#courses-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="courses.migrations.html">courses.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations.0001_initial">courses.migrations.0001_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations.0002_assignment_filesubmission">courses.migrations.0002_assignment_filesubmission module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations.0003_remove_assignment_feedfile_and_more">courses.migrations.0003_remove_assignment_feedfile_and_more module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations.0004_assignment_file_name">courses.migrations.0004_assignment_file_name module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations.0005_alter_assignment_extensions">courses.migrations.0005_alter_assignment_extensions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations.0006_alter_assignment_extensions">courses.migrations.0006_alter_assignment_extensions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations.0007_assignment_text_file">courses.migrations.0007_assignment_text_file module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.migrations.html#module-courses.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="courses.templatetags.html">courses.templatetags package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="courses.templatetags.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.templatetags.html#module-courses.templatetags.extras">courses.templatetags.extras module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses.templatetags.html#module-courses.templatetags">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-courses.admin">
+<span id="courses-admin-module"></span><h2>courses.admin module<a class="headerlink" href="#module-courses.admin" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-courses.apps">
+<span id="courses-apps-module"></span><h2>courses.apps module<a class="headerlink" href="#module-courses.apps" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="courses.apps.CoursesConfig">
+<em class="property">class </em><code class="descclassname">courses.apps.</code><code class="descname">CoursesConfig</code><span class="sig-paren">(</span><em>app_name</em>, <em>app_module</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/apps.html#CoursesConfig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.apps.CoursesConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.apps.config.AppConfig</span></code></p>
+<dl class="attribute">
+<dt id="courses.apps.CoursesConfig.default_auto_field">
+<code class="descname">default_auto_field</code><em class="property"> = 'django.db.models.BigAutoField'</em><a class="headerlink" href="#courses.apps.CoursesConfig.default_auto_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.apps.CoursesConfig.name">
+<code class="descname">name</code><em class="property"> = 'courses'</em><a class="headerlink" href="#courses.apps.CoursesConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-courses.forms">
+<span id="courses-forms-module"></span><h2>courses.forms module<a class="headerlink" href="#module-courses.forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="courses.forms.AssignCreationForm">
+<em class="property">class </em><code class="descclassname">courses.forms.</code><code class="descname">AssignCreationForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>field_order=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/forms.html#AssignCreationForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.forms.AssignCreationForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form asking the instructor for some details like deadline,total marks and the assignment’s weightage in the course and so on</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – Name of the Assignment</li>
+<li><strong>file</strong> (<em>optional</em>) – File related to assignment</li>
+<li><strong>weblink</strong> (<em>optional</em>) – Website link related to assignment</li>
+<li><strong>statement</strong> – Problem statement for the assignment</li>
+<li><strong>marks</strong> – Maximum marks for assignment</li>
+<li><strong>weightage</strong> – Contribution of this assignment to the course</li>
+<li><strong>extensions</strong> – Valid extension of the submissions</li>
+<li><strong>deadline</strong> – Time till which the submissions are accepted</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="courses.forms.AssignCreationForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'deadline': &lt;django.forms.fields.DateTimeField object&gt;, 'extensions': &lt;django.forms.fields.ChoiceField object&gt;, 'file': &lt;django.forms.fields.FileField object&gt;, 'marks': &lt;django.forms.fields.IntegerField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;, 'statement': &lt;django.forms.fields.CharField object&gt;, 'text_file': &lt;django.forms.fields.FileField object&gt;, 'weblink': &lt;django.forms.fields.URLField object&gt;, 'weightage': &lt;django.forms.fields.IntegerField object&gt;}</em><a class="headerlink" href="#courses.forms.AssignCreationForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.AssignCreationForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'deadline': &lt;django.forms.fields.DateTimeField object&gt;, 'extensions': &lt;django.forms.fields.ChoiceField object&gt;, 'file': &lt;django.forms.fields.FileField object&gt;, 'marks': &lt;django.forms.fields.IntegerField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;, 'statement': &lt;django.forms.fields.CharField object&gt;, 'text_file': &lt;django.forms.fields.FileField object&gt;, 'weblink': &lt;django.forms.fields.URLField object&gt;, 'weightage': &lt;django.forms.fields.IntegerField object&gt;}</em><a class="headerlink" href="#courses.forms.AssignCreationForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.AssignCreationForm.media">
+<code class="descname">media</code><a class="headerlink" href="#courses.forms.AssignCreationForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.forms.AssignmentSubmitForm">
+<em class="property">class </em><code class="descclassname">courses.forms.</code><code class="descname">AssignmentSubmitForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>field_order=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/forms.html#AssignmentSubmitForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.forms.AssignmentSubmitForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form for collecting the submitted assignments by the students</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file</strong> – File you need to submit</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="courses.forms.AssignmentSubmitForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#courses.forms.AssignmentSubmitForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.AssignmentSubmitForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#courses.forms.AssignmentSubmitForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.AssignmentSubmitForm.media">
+<code class="descname">media</code><a class="headerlink" href="#courses.forms.AssignmentSubmitForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.forms.CourseCreationForm">
+<em class="property">class </em><code class="descclassname">courses.forms.</code><code class="descname">CourseCreationForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>field_order=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/forms.html#CourseCreationForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.forms.CourseCreationForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form for creating a course (by the instructor).</p>
+<p>Both the parameters are unique to a particular course.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – name of the course</li>
+<li><strong>code</strong> – code for joining the course</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="courses.forms.CourseCreationForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'code': &lt;django.forms.fields.CharField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#courses.forms.CourseCreationForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.CourseCreationForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'code': &lt;django.forms.fields.CharField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#courses.forms.CourseCreationForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.CourseCreationForm.media">
+<code class="descname">media</code><a class="headerlink" href="#courses.forms.CourseCreationForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.forms.CourseJoinForm">
+<em class="property">class </em><code class="descclassname">courses.forms.</code><code class="descname">CourseJoinForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>field_order=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/forms.html#CourseJoinForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.forms.CourseJoinForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form for the student to join in a course via join code.</p>
+<p>The parameter is the code given by the instructor to a particular course.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>code</strong> – code which is giving by the instructor to join the course</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="courses.forms.CourseJoinForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'code': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#courses.forms.CourseJoinForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.CourseJoinForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'code': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#courses.forms.CourseJoinForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.CourseJoinForm.media">
+<code class="descname">media</code><a class="headerlink" href="#courses.forms.CourseJoinForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.forms.DateTimeInput">
+<em class="property">class </em><code class="descclassname">courses.forms.</code><code class="descname">DateTimeInput</code><span class="sig-paren">(</span><em>attrs=None</em>, <em>format=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/forms.html#DateTimeInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.forms.DateTimeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.widgets.DateTimeInput</span></code></p>
+<p>Form for the deadline of the new assignment</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>input_type</strong> – This takes in date in dd-mm-yyyy format and time in 12 hr format</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="courses.forms.DateTimeInput.input_type">
+<code class="descname">input_type</code><em class="property"> = 'datetime-local'</em><a class="headerlink" href="#courses.forms.DateTimeInput.input_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.DateTimeInput.media">
+<code class="descname">media</code><a class="headerlink" href="#courses.forms.DateTimeInput.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.forms.FeedbackForm">
+<em class="property">class </em><code class="descclassname">courses.forms.</code><code class="descname">FeedbackForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>field_order=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/forms.html#FeedbackForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.forms.FeedbackForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Instructor gives his feedback after correcting the assignment submitted by the student</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>feedback</strong> – Feed back to the submission</li>
+<li><strong>grade</strong> – Marks for the submission</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="courses.forms.FeedbackForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'feedback': &lt;django.forms.fields.CharField object&gt;, 'grade': &lt;django.forms.fields.IntegerField object&gt;}</em><a class="headerlink" href="#courses.forms.FeedbackForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.FeedbackForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'feedback': &lt;django.forms.fields.CharField object&gt;, 'grade': &lt;django.forms.fields.IntegerField object&gt;}</em><a class="headerlink" href="#courses.forms.FeedbackForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.FeedbackForm.media">
+<code class="descname">media</code><a class="headerlink" href="#courses.forms.FeedbackForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.forms.UserAddForm">
+<em class="property">class </em><code class="descclassname">courses.forms.</code><code class="descname">UserAddForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>field_order=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/forms.html#UserAddForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.forms.UserAddForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Instructor can add the students using this form</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Username</strong> – Username of the student</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="courses.forms.UserAddForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'username': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#courses.forms.UserAddForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.UserAddForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'username': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#courses.forms.UserAddForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.forms.UserAddForm.media">
+<code class="descname">media</code><a class="headerlink" href="#courses.forms.UserAddForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-courses.models">
+<span id="courses-models-module"></span><h2>courses.models module<a class="headerlink" href="#module-courses.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="courses.models.Assignment">
+<em class="property">class </em><code class="descclassname">courses.models.</code><code class="descname">Assignment</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/models.html#Assignment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.models.Assignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Assignment model is to store the information of each assignment</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – Name of the Assignment</li>
+<li><strong>file</strong> – File related to assignment</li>
+<li><strong>file_name</strong> – Name of the problem file</li>
+<li><strong>weblink</strong> – Website link related to assignment</li>
+<li><strong>statement</strong> – Problem statement for the assignment</li>
+<li><strong>marks</strong> – Maximum marks for assignment</li>
+<li><strong>weightage</strong> – Contribution of this assignment to the course</li>
+<li><strong>extensions</strong> – Valid extension of the submissions</li>
+<li><strong>deadline</strong> – Time till which the submissions are accepted</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="exception">
+<dt id="courses.models.Assignment.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#courses.models.Assignment.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="courses.models.Assignment.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#courses.models.Assignment.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.course">
+<code class="descname">course</code><a class="headerlink" href="#courses.models.Assignment.course" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.course_id">
+<code class="descname">course_id</code><a class="headerlink" href="#courses.models.Assignment.course_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.deadline">
+<code class="descname">deadline</code><a class="headerlink" href="#courses.models.Assignment.deadline" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.extensions">
+<code class="descname">extensions</code><a class="headerlink" href="#courses.models.Assignment.extensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.file">
+<code class="descname">file</code><a class="headerlink" href="#courses.models.Assignment.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The descriptor for the file attribute on the model instance. Return a
+FieldFile when accessed so you can write code like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="k">import</span> <span class="n">MyModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+<p>Assign a file object on assignment so you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/path/to/hello.world&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.file_name">
+<code class="descname">file_name</code><a class="headerlink" href="#courses.models.Assignment.file_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.filesubmission_set">
+<code class="descname">filesubmission_set</code><a class="headerlink" href="#courses.models.Assignment.filesubmission_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="courses.models.Assignment.get_next_by_deadline">
+<code class="descname">get_next_by_deadline</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: deadline&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#courses.models.Assignment.get_next_by_deadline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="courses.models.Assignment.get_previous_by_deadline">
+<code class="descname">get_previous_by_deadline</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: deadline&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#courses.models.Assignment.get_previous_by_deadline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.id">
+<code class="descname">id</code><a class="headerlink" href="#courses.models.Assignment.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.link">
+<code class="descname">link</code><a class="headerlink" href="#courses.models.Assignment.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.maxmarks">
+<code class="descname">maxmarks</code><a class="headerlink" href="#courses.models.Assignment.maxmarks" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.name">
+<code class="descname">name</code><a class="headerlink" href="#courses.models.Assignment.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#courses.models.Assignment.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.statement">
+<code class="descname">statement</code><a class="headerlink" href="#courses.models.Assignment.statement" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.text_file">
+<code class="descname">text_file</code><a class="headerlink" href="#courses.models.Assignment.text_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The descriptor for the file attribute on the model instance. Return a
+FieldFile when accessed so you can write code like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="k">import</span> <span class="n">MyModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+<p>Assign a file object on assignment so you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/path/to/hello.world&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Assignment.weightage">
+<code class="descname">weightage</code><a class="headerlink" href="#courses.models.Assignment.weightage" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.models.Course">
+<em class="property">class </em><code class="descclassname">courses.models.</code><code class="descname">Course</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/models.html#Course"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.models.Course" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Course model is to store the information of each course</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>instructor</strong> – Name of the instructor</li>
+<li><strong>name</strong> – Name of the course</li>
+<li><strong>students</strong> – All the students who took the course</li>
+<li><strong>joincode</strong> – Code to join the course</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="exception">
+<dt id="courses.models.Course.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#courses.models.Course.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="courses.models.Course.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#courses.models.Course.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.assignment_set">
+<code class="descname">assignment_set</code><a class="headerlink" href="#courses.models.Course.assignment_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.id">
+<code class="descname">id</code><a class="headerlink" href="#courses.models.Course.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.instructor">
+<code class="descname">instructor</code><a class="headerlink" href="#courses.models.Course.instructor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.instructor_id">
+<code class="descname">instructor_id</code><a class="headerlink" href="#courses.models.Course.instructor_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.joincode">
+<code class="descname">joincode</code><a class="headerlink" href="#courses.models.Course.joincode" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.name">
+<code class="descname">name</code><a class="headerlink" href="#courses.models.Course.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#courses.models.Course.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.Course.students">
+<code class="descname">students</code><a class="headerlink" href="#courses.models.Course.students" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="courses.models.FileSubmission">
+<em class="property">class </em><code class="descclassname">courses.models.</code><code class="descname">FileSubmission</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/models.html#FileSubmission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.models.FileSubmission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Filesubmission is a model to store the submissions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>user</strong> – Name of the user who submitted the file</li>
+<li><strong>file</strong> – Submitted file</li>
+<li><strong>file_name</strong> – Name of the file submitted</li>
+<li><strong>assignment</strong> – Assignment to which the file is submitted</li>
+<li><strong>feedback</strong> – Feedback for the submission</li>
+<li><strong>corrected</strong> – Whether the submission is submitted or not</li>
+<li><strong>grade</strong> – Marks for this submission</li>
+<li><strong>sub_time</strong> (<em>last modified</em>) – Time at which the student submitted the file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="exception">
+<dt id="courses.models.FileSubmission.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#courses.models.FileSubmission.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="courses.models.FileSubmission.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#courses.models.FileSubmission.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.assignment">
+<code class="descname">assignment</code><a class="headerlink" href="#courses.models.FileSubmission.assignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.assignment_id">
+<code class="descname">assignment_id</code><a class="headerlink" href="#courses.models.FileSubmission.assignment_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.corrected">
+<code class="descname">corrected</code><a class="headerlink" href="#courses.models.FileSubmission.corrected" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.feedback">
+<code class="descname">feedback</code><a class="headerlink" href="#courses.models.FileSubmission.feedback" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.file">
+<code class="descname">file</code><a class="headerlink" href="#courses.models.FileSubmission.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The descriptor for the file attribute on the model instance. Return a
+FieldFile when accessed so you can write code like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="k">import</span> <span class="n">MyModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+<p>Assign a file object on assignment so you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/path/to/hello.world&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.file_name">
+<code class="descname">file_name</code><a class="headerlink" href="#courses.models.FileSubmission.file_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="courses.models.FileSubmission.get_next_by_sub_time">
+<code class="descname">get_next_by_sub_time</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: sub_time&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#courses.models.FileSubmission.get_next_by_sub_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="courses.models.FileSubmission.get_previous_by_sub_time">
+<code class="descname">get_previous_by_sub_time</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: sub_time&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#courses.models.FileSubmission.get_previous_by_sub_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.grade">
+<code class="descname">grade</code><a class="headerlink" href="#courses.models.FileSubmission.grade" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.id">
+<code class="descname">id</code><a class="headerlink" href="#courses.models.FileSubmission.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#courses.models.FileSubmission.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.sub_time">
+<code class="descname">sub_time</code><a class="headerlink" href="#courses.models.FileSubmission.sub_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.user">
+<code class="descname">user</code><a class="headerlink" href="#courses.models.FileSubmission.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="courses.models.FileSubmission.user_id">
+<code class="descname">user_id</code><a class="headerlink" href="#courses.models.FileSubmission.user_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-courses.tests">
+<span id="courses-tests-module"></span><h2>courses.tests module<a class="headerlink" href="#module-courses.tests" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-courses.urls">
+<span id="courses-urls-module"></span><h2>courses.urls module<a class="headerlink" href="#module-courses.urls" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="courses.urls.path">
+<code class="descclassname">courses.urls.</code><code class="descname">path</code><span class="sig-paren">(</span><em>route</em>, <em>view</em>, <em>kwargs=None</em>, <em>name=None</em>, <em>*</em>, <em>Pattern=&lt;class 'django.urls.resolvers.RoutePattern'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#courses.urls.path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-courses.views">
+<span id="courses-views-module"></span><h2>courses.views module<a class="headerlink" href="#module-courses.views" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="courses.views.assign">
+<code class="descclassname">courses.views.</code><code class="descname">assign</code><span class="sig-paren">(</span><em>request</em>, <em>course_id</em>, <em>assign_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the user wants to go to a particular assignment homepage.</p>
+<p>It takes in two parameter namely course id and assign_id of that particular assignment and 
+returns the url to the homepage of that particular assignment. This also returns some arguments
+which can be used in the redirected html.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>course_id</strong> (<em>int</em>) – a number unique to a course</li>
+<li><strong>assign_id</strong> (<em>int</em>) – a number unique to a course</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">This returns url of coursehomepage</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">link</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.assign_create">
+<code class="descclassname">courses.views.</code><code class="descname">assign_create</code><span class="sig-paren">(</span><em>request</em>, <em>course_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#assign_create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.assign_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the instructor clicks the create assignment button.</p>
+<p>This will return to an html page which contains a form to create an assignment.
+If the form is not valid then this returns again to the same page. Or else 
+it returns to the coursehomepage of the course. Now the course home page conatains the new assignment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>course_id</strong> (<em>int</em>) – a number unique to a course</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">This returns url of coursehomepage</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">link</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.course">
+<code class="descclassname">courses.views.</code><code class="descname">course</code><span class="sig-paren">(</span><em>request</em>, <em>course_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#course"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.course" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the user whats to go to a particular course homepage.</p>
+<p>It takes in the course id of that particular course and returns the url to the
+homepage of that particular course.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>course_id</strong> (<em>int</em>) – a number unique to a course</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">This returns url of coursehomepage</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">link</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.coursesinfo">
+<code class="descclassname">courses.views.</code><code class="descname">coursesinfo</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#coursesinfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.coursesinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the coursehomepage is called.</p>
+<p>This displays all the courses which are taken by the user.This displays the
+pending assignments of the students in their homepage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">This returns url of homepage</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">link</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.create">
+<code class="descclassname">courses.views.</code><code class="descname">create</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the instructor clicks the course create button</p>
+<p>This creates a new course with the fields filled in the course creation form. If the 
+filled form is invalid this function returns back to the course create html with form.
+This returns to the home page where we can see all the courses which are taken by user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">This returns url of coursehomepage</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">link</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.feedback">
+<code class="descclassname">courses.views.</code><code class="descname">feedback</code><span class="sig-paren">(</span><em>request</em>, <em>course_id</em>, <em>assign_id</em>, <em>sub_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#feedback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.feedback" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the instructor wants to submit the marks and give a feedback.</p>
+<p>It takes in three parameter namely course id, sub_id and assign_id of that particular submission
+of a student. This returns the url to feedback html which contains a form to be filled by the instructor.
+If this form fails then thid returns back to the feedback html.
+This also returns some arguments which can be used in the redirected html.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>course_id</strong> (<em>int</em>) – a number unique to a course</li>
+<li><strong>assign_id</strong> (<em>int</em>) – a number unique to an assignment</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">This returns url of feedback page</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">link</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.give_feedback">
+<code class="descclassname">courses.views.</code><code class="descname">give_feedback</code><span class="sig-paren">(</span><em>course</em>, <em>assign</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#give_feedback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.give_feedback" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called in submissions function.</p>
+<p>This is an helper function which takes in two parameters namely course and assign.
+of a student. This function modifies the status of the submission of the student.
+The submission is uniquely defined by the given course and assign.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>course</strong> (<em>int</em>) – a number unique to a course</li>
+<li><strong>assign</strong> (<em>int</em>) – a number unique to an assignment</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.join">
+<code class="descclassname">courses.views.</code><code class="descname">join</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#join"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the student hits the join course button.</p>
+<p>This will return to an html page which contains a form to join the course.
+If the form is not valid then this returns again to the same page. Or else 
+it returns to the homepage of the user. Now the home page conatains the course which you added.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">This returns url of coursehomepage</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">link</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.participants">
+<code class="descclassname">courses.views.</code><code class="descname">participants</code><span class="sig-paren">(</span><em>request</em>, <em>course_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#participants"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.participants" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the user wants to see the participants of a course.</p>
+<p>This will redirect to participants html where all the participants can be seen. If the 
+user is an instructor for course with the given id then they can even add the
+participants and remove the participants from the course.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>course_id</strong> (<em>int</em>) – a number unique to a course</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">This returns url of participants page</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">link</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.remove">
+<code class="descclassname">courses.views.</code><code class="descname">remove</code><span class="sig-paren">(</span><em>request</em>, <em>course_id</em>, <em>user_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the instructor hits the remove button for a particular participant.</p>
+<p>This takes in two parameters namely course_id and user_id.This removes the student with the given user_id
+from the course with cgiven course_id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>course_id</strong> (<em>int</em>) – a number unique to a course</li>
+<li><strong>user_id</strong> (<em>int</em>) – a number unique to an user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">This returns url of participants page</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">link</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="courses.views.submissions">
+<code class="descclassname">courses.views.</code><code class="descname">submissions</code><span class="sig-paren">(</span><em>request</em>, <em>course_id</em>, <em>assign_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/courses/views.html#submissions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#courses.views.submissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the instructor wants see all submissions of an assignment.</p>
+<p>It takes in two parameter namely course id and assign_id of that particular assignment and 
+returns the url to the submissions of that particular assignment. This also returns some arguments
+which can be used in the redirected html.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>course_id</strong> (<em>int</em>) – a number unique to a course</li>
+<li><strong>assign_id</strong> (<em>int</em>) – a number unique to an assignment</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">This returns url of submissions page</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">link</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-courses">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-courses" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">project251</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">project251</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">courses package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moodle.html">moodle package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project251.html">project251 package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">project251</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">project251</a></li>
+      <li>Next: <a href="courses.migrations.html" title="next chapter">courses.migrations package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, The Trio.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/courses.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center;">
+    <div class = "profile" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+    font-weight:100; font-size:20px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;margin-top: 10px;
+    color: rgb(71, 134, 136);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+    <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color:rgb(26, 25, 22);"> Profile</h1>
+    <div style="left:3px; font-size: 25px; font-weight: 400;">
+        {% if user.role == 1 %}
+            <a style="color:rgb(24, 57, 46);display: inline;font-size: 27px;">Logged in as <div style="color:rgb(24, 57, 46);display: inline;font-size: 27px;">Student</div></h2><br>
+        {% else %}
+            <a style="color:rgb(24, 57, 46);display: inline; font-size: 27px;">Logged in as <div style="color:rgb(24, 57, 46); display: inline;font-size: 27px;">Instructor</div></h2><br>
+        {% endif %}
+        <br> 
+        <a style="color:rgb(63, 54, 137);display: inline;">First Name:   <div style="color:rgb(99, 99, 101);display: inline;">{{user.first_name}}</div></h2><br>
+        <a style="color:rgb(63, 54, 137);display: inline;">Last Name:   <div style="color:rgb(99, 99, 101);display: inline;">{{user.last_name}}</div></h2><br>
+        <a style="color:rgb(63, 54, 137);display: inline;">Username:   <div style="color:rgb(99, 99, 101);display: inline;">{{user.username}}</div></h2><br>
+        <a style="color:rgb(63, 54, 137);display: inline;">Email:   <div style="color:rgb(99, 99, 101);display: inline;">{{user.email}}</div></h2><br>
+        <br>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}

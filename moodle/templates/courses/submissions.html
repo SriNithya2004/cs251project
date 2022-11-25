@@ -1,0 +1,99 @@
+{% extends 'main.html' %}
+
+{% block title %}Submissions{% endblock %}
+{% block H %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+{% endblock %}
+
+{% block content %}
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+
+<div >
+<a href="{% url 'coursepage' course.pk %}"  >
+    <h2 style="text-align: center; margin-top: 5%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px;color:rgb(63, 54, 137)" >{{ course.name }}</h2>
+  </a>
+</div>
+
+
+<div style="text-align: center;">
+  <p style="font-size: 36px; font-weight: 700;color:rgb(63, 54, 137)">Submissions</p>
+  </div>
+  
+<hr>
+
+<div style="text-align: center; width: 100%;color:rgb(71, 67, 67);font-size:26px;"><h1><div style="display: inline;font-size:26px; color: rgb(63, 54, 137);">Assignment:</div>  {{ assign.name }}  <div style="display: inline; color: rgb(50, 121, 77);font-size:26px;">[ {{ assign.maxmarks }} marks ]</div></h1></div>
+
+<div style="text-align: center;">
+{% if nowtime < assign.deadline %}
+<h2 style="color: rgb(63, 54, 137);font-size:24px;">DEADLINE:  <div style="display: inline; font-size:26px;;color: red;">{{ assign.deadline }}</div> | <div style="display: inline;font-size:23px; color: rgb(20, 220, 30);">RUNNING</div></h2>
+{% else %}
+<h2 style="color: rgb(63, 54, 137);font-size:24px;">DEADLINE:  <div style="display: inline;font-size:26px;; color: red;">{{ assign.deadline }}</div> | <div style="display: inline;font-size:23px; color: rgb(220, 20, 70);">OVER</div></h2>
+{% endif %}
+
+</div>
+
+
+
+<div  style="text-align: center; width: 100%;">
+    <h2 style="color:rgb(50, 121, 77);font-size:26px;"><div style="display: inline; color: rgb(63, 54, 137);font-size:25px;">Weightage:</div>  {{ assign.weightage }}% </h2>
+
+  </div>
+<br>
+
+<div  style="background-color: rgba(246, 250, 250, 0.842);">
+  <hr>
+
+  <h2 style="color:rgb(26, 22, 59);text-align: center;">MarkList</h2>
+  <br>
+  <div style="text-align: center;"></div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                  <tr style="color:black">
+                    <th >S.No</th>
+                    <th >Student</th>
+                    <th >Submitted File </th>
+                    <th>Correction Status</th>
+                    <th>Feedback</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for d in submissions %}
+                  <tr>
+                    <th style="color:rgb(50, 121, 77)">{{forloop.counter}}</th>
+                    <th style="color:rgb(50, 121, 77)">{{d.user.username}}</th>
+                    <th ><a href="" download ="{{d.file_name}}" style="color: rgb(72, 61, 238);">{{d.file_name}}</a></th>
+
+                    {% if d.corrected == "YES" %}
+                    <th style="color: rgb(36, 197, 31);">{{d.corrected}}</th>
+                    {% else %}
+                    <th style="color: red;">{{d.corrected}}</th>
+                    {% endif %}
+
+                    {% if d.corrected == "YES" %}
+                      <th><a href="{%url 'feedback' course.pk assign.pk d.pk %}">View/Modify Feedback</a></th>
+                    {% else %}
+                      <th><a href="{%url 'feedback' course.pk assign.pk d.pk %}">Give Feedback</a></th>
+                    {% endif %}
+                      <th style="color: black;">{{ d.grade }}/{{assign.maxmarks}}</th>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<hr>
+<a href="{% url 'assign_page' course.pk assign.pk %}" >
+  <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 28px;font-weight:400;color:rgb(24, 57, 46)">Back to Assignment Page</p>
+</a> 
+
+</div>
+{% endblock %}

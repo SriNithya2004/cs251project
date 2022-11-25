@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+
+{% block title %}Courses{% endblock %}
+{% block H %}
+    {% load extras %}
+{% endblock %}
+
+{% block content %}
+
+<div >
+    <h1 style="text-align:center;color:rgb(63, 54, 137)" >COURSES</h1>
+</div>
+
+
+
+<div  style="height: fit-content; width: 100%; border-width: 5px 0px;height:auto; display: flex; background-color: rgb(220, 234, 247);">
+
+    <div style="width: 100%; height: auto; ">
+
+        <div  style="background-color: transparent;">
+            {% for course in icourses %}
+            <a  href = "{% url 'coursepage' course.pk %}" class="course" style="text-decoration: none; display: block;">
+                
+                <div style="width: 100%; height: 20%; border-width: 0px 0px 0px 0px ; text-align: center; display: inline-block; padding: 5px 0px">
+                    <h2 style="margin: 0px; padding: 0px; margin-top: 3px;text-align: center;">{{ course.name }}</h2>
+                </div>
+
+                
+            </a>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+<br>
+<br>
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 40%; margin-left:40%; width: auto;
+color: rgb(63, 54, 137);border: 5px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+
+  <div style="color:rgb(21, 65, 50);font-size:25px;font-weight400;text-align: center;">
+    <a href = "{% url 'CourseCreate' %}">Create Course</a>
+  </div>
+</div>
+{% endblock %}

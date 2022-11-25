@@ -1,0 +1,16 @@
+.
+├── output.txt
+├── test1
+│   ├── q1a_awk.sh
+│   ├── q1b_awk.sh
+│   ├── q2_awk.sh
+│   └── q3_sed.sh
+└── test2
+    ├── dictionary.cpp
+    ├── dictionary.h
+    ├── dictionaryTest.cpp
+    ├── planner.cpp
+    └── planner.h
+
+2 directories, 10 files
+

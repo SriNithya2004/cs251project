@@ -1,0 +1,199 @@
+{% extends 'main.html' %}
+
+{% block title %}Assignment{% endblock %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+{% block content %}
+
+
+<br>
+<br>
+
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-left: 27%;margin-right:27%;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+<div class="f1" style="text-align: center; color:rgb(15, 152, 106);font-weight: 600;font-size: 25px;">
+    <a  style="color: rgb(42, 35, 128); font-size: 45px; font-weight:400;" href = "{% url 'coursepage' course.pk %}" class="course" style="text-decoration: none; display: block;">{{ course.name }}</a>
+    <p>
+        <div style="font-size:30px;font-weight:600;display: inline; color: rgb(22, 22, 146);">Assignment:</div>  {{ assign.name }}
+    </p>
+    <h1>
+        <div style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:29px;"> {{ assign.weightage }}% Weight</div>
+    </h1>
+    <div style="display: inline;font-weight:600;font-size:25px; color: rgb(15, 152, 106);">({{ assign.maxmarks }} marks)</div>
+    
+</div>
+    
+<div style="text-align: center;">
+    <p style="color: rgb(22, 22, 146);font-size: 25px; text-align: center;font-weight: 400;">Deadline [ {{ assign.deadline }} ]
+    </p>
+</div>
+<hr style="height: 0.5px;width: 100%;">
+    {% if assign.file.name %}
+    <br>
+    <div style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:29px;">  Problem File: 
+        <div style="display: inline;">
+            <a href= "" download="{{assign.file_name}}" style="color: rgb(40, 37, 214);text-align: center;">
+                {{ assign.file_name }}
+            </a>
+        </div>
+    </h2>
+    {% endif %}
+
+    {% if assign.text_file.name %}
+    <br>
+    <div style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:29px;"> Tree File: 
+        <div style="display: inline;">
+            <a href= "" download="{{assign.text_file}}" style="color: rgb(40, 37, 214);text-align: center;">
+                {{ tree_name }}
+            </a>
+        </div>
+    </h2>
+    {% endif %}
+
+    {% if assign.link != '' %}
+    <h2 style="color:rgb(19, 19, 189);text-align: center; font-size: 28px;">  Link:
+        <div style="display: inline;">
+            <a href="{{assign.link}}" style="font-size:25px;color: rgb(15, 152, 106);">click here</a>
+        </div>
+    </h2>
+    {% endif %}
+
+    
+    <h2 style="color:rgb(22, 22, 146);text-align: center;font-weight: 500; font-size: 28px;">Problem Description:</h2>
+    <div class = "dis" style="text-align: center; font-style: normal; color:rgb(15, 152, 106); font-size: 26px;font-weight:400">
+        <p >{{ assign.statement|linebreaks }}</p>
+    </div>
+    
+{% if instruct %}
+<div style="text-align: center">
+    <div style="display: inline; color: rgb(71, 60, 153); font-weight: 400;"><p style="font-size:30px">Total students: {{ students|length }}</p></div>
+    <p style="color: rgb(15, 152, 106); font-size: 30px;" > Submissions received: {{ submissions|length }}  </p>
+    <br>
+    <a href="{% url 'submissions' course.pk assign.pk %}">
+        <button class="button4" style="font-size: 25px; color:rgb(30, 115, 21)"> View Submissions</button>
+    </a>
+    <br>
+    <br>
+    <br>
+</div>
+{% else %}
+
+{% if deadline > nowtime %}
+
+<div class="assignment2">
+    <form method="post" enctype="multipart/form-data" action="" >
+        {% csrf_token %}
+        <p style="color: rgb(22, 22, 146);font-size: 30px;font-weight: 600;">Submit File:</p>
+        {% for field in form %}
+        {{field}}
+        {% endfor %}
+        {% if assign.extensions == 1 %}
+            <p style="color:red;font-size:23px;">*Valid file extensions is .zip</p>
+        {% elif assign.extensions == 2 %}
+        <p style="color:red;font-size:23px;">*Valid file extensions is .cpp</p>
+        {% elif assign.extensions == 3 %}
+        <p style="color:red;font-size:23px;">*Valid file extensions is .tar.gz</p>
+        {% elif assign.extensions == 4 %}
+        <p style="color:red;font-size:23px;">*Valid file extensions is .py</p>
+        {% else %}
+        <p style="color:red;font-size:23px;">*Valid file extensions is .tgz</p>
+        {% endif %}
+        {% if submitted %}
+            <button type="submit" style="color:black">Re-Submit</button>
+        {% else %}
+        <button type="submit" style="color:black">Submit</button>
+        {% endif %}
+      </form>
+
+</div>
+
+{% endif %}
+<hr style="height: 0.5px;width: 100%;">
+<p style="text-align: center;font-size:35px;font-weight:600;color:rgb(22, 22, 146)">Status</p>
+<div  >
+    <div >
+        <div style="text-align: center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><p style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:22px;text-align: center;">Submission Status:</p></th>
+                    {% if submitted %}
+                        <th><p style="color: rgb(46, 160, 42);">SUBMITTED FOR GRADING</p></th>
+                    {% else %}
+                        <th><p style="color: rgb(236, 55, 55);">Not Submitted</p></th>
+                    {% endif %}
+                  </tr>
+
+
+                  <tr>
+                    <th><p style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:22px;text-align: center;"> Grading Status:</p></th>
+
+                    {% if not submitted %}
+                        <th><p style="color: rgb(235, 38, 38);">Not Graded</p></th>
+                    {% else %}
+                        {% if mysub.corrected == "YES" %}
+                        <th><p style="color: rgb(25, 207, 41);">Graded</p></th>
+                        {% else %}
+                        <th><p style="color: rgb(235, 38, 38);">Not Graded</p></th>
+                        {% endif %}
+                    {% endif %}
+                  </tr>
+
+
+                  <tr>
+                      <th><p style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:22px;text-align: center;">Last Modified:</p></th>
+                      {% if not submitted %}
+                        <th>-----</th>
+                      {% else %}
+                        <th><p style="color: rgb(65, 63, 63)">{{ mysub.sub_time }}</p></th>
+                      {% endif %}
+
+                  </tr>
+
+                  <tr>
+                      <th><p style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:22px;text-align: center;">Submitted File:</p></th>
+                      {% if not submitted %}
+                        <th>-----</th>
+                      {% else %}
+                        <th><p style="color: rgb(65, 63, 63)"><a href="" download ="{{ mysub.file_name }}" style="color: rgb(40, 37, 214);">{{ mysub.file_name }}</a></p></th>
+                      {% endif %}
+
+                  </tr>
+
+                  <tr>
+                    <th><p style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:22px;text-align: center;">Marks:</p></th>
+                    {% if not submitted %}
+                      <th>-----</th>
+                    {% else %}
+                        <th><p style="color: rgb(65, 63, 63)">{{ mysub.grade }}/{{assign.maxmarks }}</p></th>
+                    {% endif %}
+                  </tr>
+
+                  <tr>
+                      <th><p style="display: inline; color: rgb(22, 22, 146);font-weight:500;font-size:22px;text-align: center;">Feedback:</p></th>
+                      {% if not submitted %}
+                        <th>-----</th>
+                      {% else %}
+                        <th><p style="color: rgb(65, 63, 63)">{{ mysub.feedback }}</p></th>
+                      {% endif %}
+                  </tr>
+
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block title %}LOGIN{% endblock %}
+
+
+{% block content %}
+<br><br>
+<br><br>
+<br><br>
+
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+
+<h1 style="color: rgb(26, 25, 22);text-align: center;">LOG IN</h1>
+
+<form style="font-weight:400" method="post" style="text-align: center;">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="B1 button2" style="color:rgb(44, 39, 79);">Log In</button>
+
+  <p style="text-align:center; color:rgb(24, 57, 46); font-size:24px"> Is it your first time here? <a href="{% url 'signup' %}">Create account</a></p>
+</form>
+<br>
+</div>
+
+{% endblock %}

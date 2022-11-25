@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+
+{% block title %}CoursePage{% endblock %}
+
+{% block content %}
+
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+<p style="margin-left: 0%;font-weight: 600; font-family: Verdana, Geneva, Tahoma, sans-serif;font-size:45px;text-align: center;color: rgb(63, 54, 137);">{{ course.name }}</p>
+    <p style="margin-left: 0%; color: rgb(63, 54, 137); text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 30px;font-weight: 400;">
+        Join Code:    {{ course.joincode }}</p>
+    
+    {% if user.username == Instructor.username %}
+    <a href="{% url 'assign_create' course.pk %}" >
+    <h2 style="margin-left: 0%; margin-top: 6%;color:rgb(15, 152, 106);font-weight: 400">Create Assignment</h2></a> 
+    
+    
+    {% endif %}
+
+<hr>
+    <p style="font-size: 27px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     align-self:  center;color:rgb(14, 15, 15);font-weight: 600; margin: 0px;">Assignments</p>
+    <hr>
+    <p style="font-size: 27px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self:  center;color:rgb(63, 54, 137);font-weight: 400; margin: 0px;"> Still Running: </p>
+    {% for a in assignments %}
+        {% if a.deadline > nowtime %}
+            <a href="{% url 'assign_page' course.pk a.pk %}" >
+            <p style="margin-top: 2.5% ;font-size:28px;font-weight:400;color:rgb(33, 204, 33)"> {{ a.name }} </p>
+            </a>
+        {% endif %}
+    {% endfor %}
+<hr>
+    <p style="font-size: 27px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self:  center;color:rgb(63, 54, 137);font-weight: 400; margin: 0px;">Deadline Up:</p>
+    {% for a in assignments %}
+        {% if a.deadline > nowtime %}
+        {% else %}
+            <a href="{% url 'assign_page' course.pk a.pk %}">
+            <p style="margin-top: 2.5% ;font-size:28px;font-weight:400;color:rgb(240, 61, 37)"> {{ a.name }} </p>
+            </a>
+        {% endif %}
+    {% endfor %}
+<hr>
+<br>
+    <a href = "{% url 'participants' course.pk %}">
+        <p style="font-size: 28px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-self:  center;color:rgb(9, 75, 34);font-weight: 400; margin: 0px;">Participants</p>
+        
+    </a>
+    
+</div>
+
+{% endblock %}
+   

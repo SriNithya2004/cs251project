@@ -1,0 +1,122 @@
+{% extends 'main.html' %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block H %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+
+<style>
+ .textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class = "login" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin-right: 27%; margin-left:27%; width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+
+<br>
+<div >
+  <a href="{% url 'coursepage' course.pk %}"  >
+      <h2 style="text-align: center; margin-top: 5%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px;color:rgb(63, 54, 137)" >{{ course.name }}</h2>
+    </a>
+  </div>
+  <div style="text-align: center;">
+    <p style="font-size: 36px; font-weight: 700;color:rgb(63, 54, 137)">Feedback</p>
+    </div>
+    
+    <hr>
+
+    <div style="text-align: center; width: 100%;color:rgb(71, 67, 67);font-size:27px;"><h1 style="font-size:26px"><div style="display: inline;font-size:25px; 
+    color: rgb(63, 54, 137);">Assignment:</div>  {{ assign.name }}  <div style="display: inline; color: rgb(50, 121, 77);font-size:26px;">
+    [ {{ assign.maxmarks }} marks ]</div></h1></div>
+    
+    <div style="text-align: center;">
+    {% if nowtime < assign.deadline %}
+    <h2 style="color: rgb(63, 54, 137);font-size:24px;">DEADLINE:  <div style="display: inline; font-size:26px;;color: rgb(36, 197, 31);">{{ assign.deadline }}</div> | <div style="display: inline;font-size:20px; color: rgb(20, 220, 30);">RUNNING</div></h2>
+    {% else %}
+    <h2 style="color: rgb(63, 54, 137);font-size:24px;">DEADLINE:  <div style="display: inline;font-size:26px;; color: red;">{{ assign.deadline }}</div> | <div style="display: inline;font-size:20px; color: rgb(220, 20, 70);">OVER</div></h2>
+    {% endif %}
+    
+    </div>
+    
+  
+  
+  <div  style="text-align: center; width: 100%;">
+      <h2 style="color:rgb(50, 121, 77);font-size:25px;"><div style="display: inline; color: rgb(63, 54, 137);font-size:24px;">Weightage:</div>  {{ assign.weightage }}% </h2>
+  
+    </div>
+
+
+<div >
+    <div >
+        <div >
+            <table class="table">
+                <thead>
+                  <tr style="color: black">
+                    <th >Student</th>
+                    <th >Submitted File</th>
+                    <th>Correction Status</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th style="color:rgb(22,22,146)">{{sub.user.username}}</th>
+                    <th><a download href="{{sub.file.url}}" style="color: rgb(72, 61, 238);;">{{sub.file_name}}</a></th>
+                    {% if sub.corrected == "YES" %}
+                    <th style="color: rgb(36, 197, 31);">{{sub.corrected}}</th>
+                    {% else %}
+                    <th style="color: red;">{{sub.corrected}}</th>
+                    {% endif %}
+                    <th style="color: rgb(36, 197, 31);">{{ sub.grade }}/100</th>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<hr>
+<div style="text-align: center;">
+<form method="post">
+    {% csrf_token %}
+    {{form.non_field_errors}}
+    <div class="fieldWrapper">
+        {{ form.feedback.errors }}
+        <label for="{{ form.feedback.id_for_label}}" style="font-weight: 500;"><h2 style="color:rgb(22,22,146)">Feedback</h2></label><br>
+        {{ form.feedback }}
+
+        {{ form.grade.errors }}
+        <label for="{{ form.grade.id_for_label}}" ><p style="color:red;font-size:32px;font-weight:400">Grade</p></label><br>
+        {{ form.grade }}
+    </div>
+    <br>
+    <button type="submit" class="B1 button2">Submit</button>
+  </form>
+   
+
+  <a href="{% url 'submissions' course.pk assign.pk %}" >
+    <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 28px;font-weight:400;color:rgb(25, 58, 47)">Submissions page</h2>
+   </a> 
+  <a href="{% url 'assign_page' course.pk assign.pk %}" >
+    <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 28px;font-weight:400;color:rgb(24, 57, 46)">Back to Assignment Page</p>
+  </a> 
+</div>
+
+
+
+{% endblock %}

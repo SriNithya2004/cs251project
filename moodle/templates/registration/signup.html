@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block title %}Sign_Up{% endblock %}
+
+{% block content %}
+
+<div class = "signup" style="border-radius:20px; text-align:center; font-family:Verdana,Geneva,Tahoma,sans-serif;
+font-weight:100; font-size:23px; padding:10px; margin: 20px 300px 20px 300px ;width: auto;
+color: rgb(63, 54, 137);border: 6px solid rgb(63, 54, 137);background-color: rgba(200, 232, 235, 0.842);" >
+<h1 style="color: rgb(4, 3, 3);">SIGN UP</h1>
+<form style="font-weight:400" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+		<div class="fieldWrapper">
+		{{ field.errors }}
+		
+		<p class = "field" style="color: rgb(50, 41, 117); font-size: 25px;">{{ field.label_tag }}     {{field}}</p>
+		{% if field.help_text %}
+			<div class = "help" style="color: rgb(95, 94, 99);font-size: 19px;">{{ field.help_text|safe }} </div>
+		{% endif %}
+		</div>
+	{% endfor %}
+    <button type="submit" class="B1 button2" style="color:rgb(44, 39, 79);">SignUp</button>
+
+	<p style="text-align:center; color:rgb(24, 57, 46); font-size:24px"> Already have an account? <a href="{% url 'login' %}">Log in </a></p>
+</form>
+
+</div>
+
+{% endblock %}
+
