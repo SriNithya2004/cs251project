@@ -72,6 +72,8 @@ Clicking on course name at any point from here redirects us to course homepage.
    - He/She can also see total number of students and number of submissions. There is a button at the bootom of this page clicking on which redirects us to submissions page.
   #### Submissions Page: 
   - The instructor can see the assignment's name,description,max_marks and weightage in this page and also a table containing students,their submissions,correction status,feedback and grade. 
+  - ![instrucsubmi](https://user-images.githubusercontent.com/96788348/204051290-2718c7b4-cdf2-4680-8bd8-14ddbff1cf0c.png)
+
   - Clicking on student's submission file downloads the submission for instructor.
 - If feedback is not submitted for a student then "Give feedback" option appears under feedback column for that student. If feedback is already submitted for a student then "View/Modify feedback" option appears under feeback column for that student. Clicking on those options redirects instructor to feedback page.
 - -1/Max_Marks appears under grade column for a student if his grading is not done by the instructor.It gets updated as soon as instructor submits feedback for that student. Clicking on "Back to Assignments" button at bottom redirects us to Assignment's homepage.
