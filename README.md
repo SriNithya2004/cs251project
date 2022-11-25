@@ -94,6 +94,7 @@ Clicking on course name at any point from here redirects us to course homepage.
   - If the student submits valid extension and clicks submit button the submission gets accepted and the status table updates. 
   - If the valid extension is .zip or .tar.gz or .tgz then when the student submits ,the submission gets checked with valid extension and tree directory uploaded by instructor. 
   - If both gets validated then the submission is considered and status table gets updated.
-  
+  ![submistu](https://user-images.githubusercontent.com/96788348/204050985-1147e247-1336-4c42-8cb3-f067ac95ad70.png)
+
 
 
