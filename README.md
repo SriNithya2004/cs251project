@@ -13,12 +13,14 @@ We created a website ("Moodle") which provides services to its users. Some of it
 - Password for this username follows certain protocols like having atleast 8 characters, not entirely numeric etc for security reasons.
 - The role can have two options student and instructor. The user must choose one of the roles based on which the permissions for their account are granted.
 Once an account is created, user can use those credentials to login into their account.
+![signup](https://user-images.githubusercontent.com/96788348/204045036-0c3afeeb-8c92-4047-a4ba-ae17a56e50a3.png)
 
 ## Login:
 - Authentication is must for an user to login. The user should have already been signed up if he/she wants to login.
 - They must enter valid credentials i.e username and password.
 - Soon after the user enters the login credentials in the login page he gets redirected to the homepage.
 - Homepages of the instructors and the students are different.Once the user is logged in he/she can see the **homepage**.
+![login](https://user-images.githubusercontent.com/96788348/204044733-2acc3035-9362-488a-91cd-d73052563aef.png)
 
  ## Homepage:
  - After user logged in to the website user can see their dashboard.
@@ -36,7 +38,9 @@ clicking on which user gets redirected to the homepage ,on whichever page they a
  - Join code - maxlength=100, it's unique and is required for students to join the course
  If you enter a course name or join code that's already registered, an error message appears **"Course name or Join code already exists!"**
  - courses that are created by the instructor
-	
+![createcourseinstructor](https://user-images.githubusercontent.com/96788348/204047195-bfdb3c7d-a937-4a90-8807-da178da9fee7.png)
+![instrhomepage](https://user-images.githubusercontent.com/96788348/204048508-7667c736-6124-4761-a7ef-70469dae485f.png)
+
 ### Homepage of Student:
  - contains an option "Join Course" to join course:
  - a link allowing the student to join in a course after the join code of the course is entered.
@@ -51,12 +55,15 @@ Clicking on course name at any point from here redirects us to course homepage.
  The assignments whose deadline is up appears under 1st category else appears in 2nd category.
  - At top appears join code of the course and an option "Create Asssignment". Clicking on create assignment redirects you to assignment creation form.
  - Clicking on assignment names redirects instructor to **assignment page** .Clicking on participants redirects you to **participants page**.
- 
+ ![coursepage](https://user-images.githubusercontent.com/96788348/204049358-69a11ac3-b2cb-4527-9b15-925097450b09.png)
+
   ### Assignment Creation:
  - Clicking on **Create Assignment** redirects you to assignment creation form where you need to enter some details about it.
   Name and **description** of the assignment are required fields, and instructor can add any Problem **files** and/or a **url** reference to the assignment. We can set the **Maximum Marks** in the assignment and assign its **Weightage** in the course. Instructor have to set a **Deadline** to the assignment.
   - Instructor have to select a file extension of file which is needed to be submitted by students in the course for that assignment. The extension fields contains the following choices. 
    .zip, .cpp, .tar.gz, .py, .tgz. The instructor can chose only one valid extension. If he choses .zip or .tar.gz or .tgz as a valid extension he must upload a .txt file containing tree of the directory that needs to be uploaded by student. Clicking on create button redirects you to course page.
+   ![createassgn](https://user-images.githubusercontent.com/96788348/204049137-fcaff347-9e7b-4c5c-8c69-d99b4ac8ee89.png)
+
   ### Assignment Page:
    - Clicking on the assignment name in course page redirects you to the respective assignments'page. The instructor can see name,description,max_marks weightage and the problem file in this page.
    - He/She can also see total number of students and number of submissions. There is a button at the bootom of this page clicking on which redirects us to submissions page.
