@@ -81,6 +81,8 @@ Clicking on course name at any point from here redirects us to course homepage.
    #### Feedback Page:
     - The instructor can see assignment's name,description,max_marks and weightage in this page. This form is for each student.
     - The instructor can see a table containing student name,his/her submission file(Clicking on which downloads the file for instructor),correction status,and   grade. There is a box for feedback in which instructor can provide feedback and grade in grade field below. Clicking on submit button redirects instructor to submissions page after updating the respective fields.
+    - ![feedback](https://user-images.githubusercontent.com/96788348/204051538-f9d88095-f94c-46a0-b891-7a0d5a427808.png)
+
 ---------------------------------------------------
 
 ## Course page of student:
