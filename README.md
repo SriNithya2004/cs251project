@@ -66,6 +66,7 @@ Clicking on course name at any point from here redirects us to course homepage.
   - Instructor have to select a file extension of file which is needed to be submitted by students in the course for that assignment. The extension fields contains the following choices. 
    .zip, .cpp, .tar.gz, .py, .tgz. The instructor can chose only one valid extension. If he choses .zip or .tar.gz or .tgz as a valid extension he must upload a .txt file containing tree of the directory that needs to be uploaded by student. Clicking on create button redirects you to course page.
    ![createassgn](https://user-images.githubusercontent.com/96788348/204049137-fcaff347-9e7b-4c5c-8c69-d99b4ac8ee89.png)
+![instrcorrect](https://user-images.githubusercontent.com/96788348/204051407-76071c47-2f7d-4445-b97c-7491b65bb29c.png)
 
   ### Assignment Page:
    - Clicking on the assignment name in course page redirects you to the respective assignments'page. The instructor can see name,description,max_marks weightage and the problem file in this page.
