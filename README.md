@@ -9,9 +9,10 @@ We created a website ("Moodle") which provides services to its users. Some of it
 - Authentication is must for an user to login. When an user visits our website it gets directed to login page.
  If a user visits our website for the very first time and don't have an account then they must use the SignUp option. It redirects us to the **Signup** portal, where user can create an account.
 - Here user should fill up some essential details to create an account.The signup form fails if user don't fill all the required fields.
-- The signup form contains some required fields like username,password,email and role. Username is of user's interest within 150 characters and can contain letters, digits and @/./+/-/_ .Password for this username follows certain protocols like having atleast 8 characters, not entirely numeric etc for security reasons.
-The role has 2 options student and instructor. The user must choose one of the roles based on which the permissions for their account are granted.
-Once an account is created, user can use those credentials to login into their account
+- The signup form contains some required fields like username,password,email and role. Username is of user's interest within 150 characters and can contain letters, digits and @/./+/-/_ .
+- Password for this username follows certain protocols like having atleast 8 characters, not entirely numeric etc for security reasons.
+- The role can have two options student and instructor. The user must choose one of the roles based on which the permissions for their account are granted.
+Once an account is created, user can use those credentials to login into their account.
 
 ## Login:
 - Authentication is must for an user to login. The user should have already been signed up if he/she wants to login.
@@ -61,8 +62,10 @@ Clicking on course name at any point from here redirects us to course homepage.
    - Clicking on the assignment name in course page redirects you to the respective assignments'page. The instructor can see name,description,max_marks weightage and the problem file in this page.
    - He/She can also see total number of students and number of submissions. There is a button at the bootom of this page clicking on which redirects us to submissions page.
   #### Submissions Page: 
-  The instructor can see assignment's name,description,max_marks and weightage in this page. The instructor can see a table containing students,their submissions,correction status,feedback and grade. Clicking on student's submission file downloads the submission for instructor.
-If feedback is not submitted for a student then "Give feedback" option appears under feedback column for that student. If feedback is already submitted for a student then "View/Modify feedback" option appears under feeback column for that student. Clicking on those options redirects instructor to feedback page. -1/Max_Marks appears under grade column for a student if his grading is not done by the instructor.It gets updated as soon as instructor submits feedback for that student. Clicking on "Back to Assignments" button at bottom redirects us to Assignment's homepage.
+  - The instructor can see the assignment's name,description,max_marks and weightage in this page and also a table containing students,their submissions,correction status,feedback and grade. 
+  - Clicking on student's submission file downloads the submission for instructor.
+- If feedback is not submitted for a student then "Give feedback" option appears under feedback column for that student. If feedback is already submitted for a student then "View/Modify feedback" option appears under feeback column for that student. Clicking on those options redirects instructor to feedback page.
+- -1/Max_Marks appears under grade column for a student if his grading is not done by the instructor.It gets updated as soon as instructor submits feedback for that student. Clicking on "Back to Assignments" button at bottom redirects us to Assignment's homepage.
    #### Feedback Page:
     - The instructor can see assignment's name,description,max_marks and weightage in this page. This form is for each student.
     - The instructor can see a table containing student name,his/her submission file(Clicking on which downloads the file for instructor),correction status,and   grade. There is a box for feedback in which instructor can provide feedback and grade in grade field below. Clicking on submit button redirects instructor to submissions page after updating the respective fields.
@@ -75,8 +78,13 @@ Clicking on course name at any point from here redirects us to course homepage.
  Clicking on assignment names redirects student to **assignment page** 
  Clicking on participants redirects you to **participants page**
   
-  ## Assignment Page:
-  Clicking on the assignment name in course page redirects you to the respective assignments'page. The student can see asssignment's name,url,description,max_marks weightage,deadline and the problem file in this page. There is a status table containing submission status,grading status, last modified time, submitted file, grade and feedback. There is an option for student to submit file.The valid extension  clearly appears under the button. If the student submits file with invalid extension and clicks on submit button the submission is not considered and the page appears as it is. If the student submits valid extension and clicks submit button the submission gets accepted and the status table updates. If the valid extension is .zip or .tar.gz or .tgz then when the student submits ,the submission gets checked with valid extension and tree directory uploaded by instructor. If both gets validated then the submission is considered and status table gets updated.
+  ### Assignment Page:
+  - Clicking on the assignment name in course page redirects you to the respective assignments'page. The student can see asssignment's name,url,description,max_marks weightage,deadline and the problem file in this page. There is a status table containing submission status,grading status, last modified time, submitted file, grade and feedback. 
+  - There is an option for student to submit file.The valid extension  clearly appears under the button. 
+  - If the student submits file with invalid extension and clicks on submit button the submission is not considered and the page appears as it is. 
+  - If the student submits valid extension and clicks submit button the submission gets accepted and the status table updates. 
+  - If the valid extension is .zip or .tar.gz or .tgz then when the student submits ,the submission gets checked with valid extension and tree directory uploaded by instructor. 
+  - If both gets validated then the submission is considered and status table gets updated.
   
 
 
