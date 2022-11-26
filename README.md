@@ -64,7 +64,11 @@ Clicking on course name at any point from here redirects us to course homepage.
  - Clicking on **Create Assignment** redirects you to assignment creation form where you need to enter some details about it.
   Name and **description** of the assignment are required fields, and instructor can add any Problem **files** and/or a **url** reference to the assignment. We can set the **Maximum Marks** in the assignment and assign its **Weightage** in the course. Instructor have to set a **Deadline** to the assignment.
   - Instructor have to select a file extension of file which is needed to be submitted by students in the course for that assignment. The extension fields contains the following choices. 
-   .zip, .cpp, .tar.gz, .py, .tgz. The instructor can chose only one valid extension. If he choses .zip or .tar.gz or .tgz as a valid extension he must upload a .txt file containing tree of the directory that needs to be uploaded by student. Clicking on create button redirects you to course page.
+   .zip, .cpp, .tar.gz, .py, .tgz. The instructor can chose only one valid extension.
+  - If he choses .zip or .tar.gz or .tgz as a valid extension and want to ensure correct file directory of student submission, he must upload a .txt file as shown in below figure containing tree of the directory that needs to be uploaded by student.(Ensure the dot in place of submission name and the extra line at the end).
+  ![Screenshot from 2022-11-27 00-17-39](https://user-images.githubusercontent.com/111399280/204104461-c4ec7394-27e8-48c0-8d3c-c9bf1e7aa188.png)
+
+  Clicking on create button redirects you to course page.
    ![createassgn](https://user-images.githubusercontent.com/96788348/204049137-fcaff347-9e7b-4c5c-8c69-d99b4ac8ee89.png)
 ![instrcorrect](https://user-images.githubusercontent.com/96788348/204051407-76071c47-2f7d-4445-b97c-7491b65bb29c.png)
 
